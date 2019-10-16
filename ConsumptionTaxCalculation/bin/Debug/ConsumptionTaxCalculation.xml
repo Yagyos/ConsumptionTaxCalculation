@@ -6,7 +6,65 @@ ConsumptionTaxCalculation
 </name>
 </assembly>
 <members>
-<member name="P:ConsumptionTaxCalculation.My.Resources.Resources.ResourceManager">
+<member name="M:ConsumptionTaxCalculation.ConsumptionTaxCalc.Calculation(ConsumptionTaxCalculation.ConsumptionTaxCalc.DataSet@)">
+	<summary>
+ 税計算実施
+ </summary>
+	<param name="ConTaxCalData"></param>
+	<remarks></remarks>
+</member><member name="M:ConsumptionTaxCalculation.ConsumptionTaxCalc.CalculationOutside(ConsumptionTaxCalculation.ConsumptionTaxCalc.DataSet@)">
+	<summary>
+ 外税税額算出 丸め処理も実施
+ </summary>
+	<param name="ConTaxCalData"></param>
+	<returns>外税税額</returns>
+	<remarks></remarks>
+</member><member name="M:ConsumptionTaxCalculation.ConsumptionTaxCalc.CalculationOutsideTax(System.Decimal,System.Decimal)">
+	<summary>
+ 外税税額算出 丸め処理前
+ </summary>
+	<param name="OutsideNetAmount"></param>
+	<param name="TaxRate"></param>
+	<returns>外税税額</returns>
+	<remarks></remarks>
+</member><member name="M:ConsumptionTaxCalculation.ConsumptionTaxCalc.CalculationInside(ConsumptionTaxCalculation.ConsumptionTaxCalc.DataSet@)">
+	<summary>
+ 内税税額算出 丸め処理も実施 税別金額はInsideNetAmount
+ </summary>
+	<param name="ConTaxCalData"></param>
+	<returns>内税税額 InsideTaxAmount:内税税額 InsideNetAmount:税別金額</returns>
+	<remarks></remarks>
+</member><member name="M:ConsumptionTaxCalculation.ConsumptionTaxCalc.CalculationInsideTax(System.Decimal,System.Decimal)">
+	<summary>
+ 内税税額算出 丸め処理前
+ </summary>
+	<param name="InsideNetAmount"></param>
+	<param name="TaxRate"></param>
+	<returns>内税税額</returns>
+	<remarks></remarks>
+</member><member name="T:ConsumptionTaxCalculation.RoundCalc.RoundType">
+	<summary>
+ 丸め種類 off:四捨五入 down:切り捨て up:切り上げ
+ </summary>
+	<remarks></remarks>
+</member><member name="M:ConsumptionTaxCalculation.RoundCalc.Calculation(System.Decimal,ConsumptionTaxCalculation.RoundCalc.RoundType)">
+	<summary>
+ 丸め実施(小数点以下を丸め)
+ </summary>
+	<param name="TaxAmount">丸め元の金額</param>
+	<param name="TaxRound"></param>
+	<returns>丸められた金額</returns>
+	<remarks></remarks>
+</member><member name="M:ConsumptionTaxCalculation.RoundCalc.Calculation(System.Decimal,ConsumptionTaxCalculation.RoundCalc.RoundType,System.Int32)">
+	<summary>
+ 丸め実施
+ </summary>
+	<param name="TaxAmount">丸め元の金額</param>
+	<param name="TaxRound"></param>
+	<param name="RoundDigits">丸め桁数 0:小数点以下丸め(12.3→12) 1:(12→10) -1:(1.23→1.2)</param>
+	<returns>丸められた金額</returns>
+	<remarks></remarks>
+</member><member name="P:ConsumptionTaxCalculation.My.Resources.Resources.ResourceManager">
 	<summary>
   このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
 </summary>
