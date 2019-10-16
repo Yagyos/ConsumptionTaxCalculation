@@ -7,3 +7,13 @@ C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\WindowsApplication2\
 C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\WindowsApplication2\obj\x86\Debug\ConsumptionTaxCalculation.exe
 C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\WindowsApplication2\obj\x86\Debug\ConsumptionTaxCalculation.xml
 C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\WindowsApplication2\obj\x86\Debug\ConsumptionTaxCalculation.pdb
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\ConsumptionTaxCalculation\bin\Debug\ConsumptionTaxCalculation.exe.config
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\ConsumptionTaxCalculation\obj\x86\Debug\ConsumptionTaxCalculation.exe
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\ConsumptionTaxCalculation\obj\x86\Debug\ConsumptionTaxCalculation.xml
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\ConsumptionTaxCalculation\obj\x86\Debug\ConsumptionTaxCalculation.pdb
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\ConsumptionTaxCalculation\bin\Debug\ConsumptionTaxCalculation.exe
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\ConsumptionTaxCalculation\bin\Debug\ConsumptionTaxCalculation.pdb
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\ConsumptionTaxCalculation\bin\Debug\ConsumptionTaxCalculation.xml
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\ConsumptionTaxCalculation\obj\x86\Debug\ConsumptionTaxCalculation.Form1.resources
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\ConsumptionTaxCalculation\obj\x86\Debug\ConsumptionTaxCalculation.Resources.resources
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\ConsumptionTaxCalculation\obj\x86\Debug\ConsumptionTaxCalculation.vbproj.GenerateResource.Cache
