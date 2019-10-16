@@ -1,0 +1,9 @@
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\WindowsApplication2\bin\Debug\ConsumptionTaxCalculation.exe
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\WindowsApplication2\bin\Debug\ConsumptionTaxCalculation.pdb
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\WindowsApplication2\bin\Debug\ConsumptionTaxCalculation.xml
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\WindowsApplication2\obj\x86\Debug\ConsumptionTaxCalculation.Form1.resources
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\WindowsApplication2\obj\x86\Debug\ConsumptionTaxCalculation.Resources.resources
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\WindowsApplication2\obj\x86\Debug\ConsumptionTaxCalculation.vbproj.GenerateResource.Cache
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\WindowsApplication2\obj\x86\Debug\ConsumptionTaxCalculation.exe
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\WindowsApplication2\obj\x86\Debug\ConsumptionTaxCalculation.xml
+C:\Users\yagi_yo\Documents\GitHub\ConsumptionTaxCalculation\WindowsApplication2\obj\x86\Debug\ConsumptionTaxCalculation.pdb
