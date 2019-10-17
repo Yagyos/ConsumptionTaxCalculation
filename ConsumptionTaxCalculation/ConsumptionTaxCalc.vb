@@ -1,48 +1,45 @@
 ﻿Option Explicit On '型宣言を強制
 Option Strict On 'タイプ変換を厳密に
 
-Public Module ConsumptionTaxCalc
+Public Class ConsumptionTaxCalc
 
-    Structure DataSet
-        Dim OriginalAmount As Decimal '算出元の金額
-        Dim TaxRate As Decimal '税率 8%→[8] 10%→[10]
-        Dim TaxRound As RoundCalc.RoundType '丸め種類
-        Dim RoundDigits As Integer '丸め桁数 0:小数点以下丸め(12.3→12) 1:(12→10) -1:(1.23→1.2)
-        Dim OutsideTaxAmount As Decimal '外税税額
-        Dim InsideTaxAmount As Decimal '内税税額
-        Dim InsideNetAmount As Decimal '内税正味金額
-    End Structure
+    Public OriginalAmount As Decimal '算出元の金額
+    Public TaxRate As Decimal '税率 8%→[8] 10%→[10]
+    Public TaxRound As RoundCalc.RoundType '丸め種類
+    Public RoundDigits As Integer '丸め桁数 0:小数点以下丸め(12.3→12) 1:(12→10) -1:(1.23→1.2)
+    Public OutsideTaxAmount As Decimal '外税税額
+    Public InsideTaxAmount As Decimal '内税税額
+    Public InsideNetAmount As Decimal '内税正味金額
 
     ''' <summary>
     ''' 税計算実施
     ''' </summary>
-    ''' <param name="ConTaxCalData"></param>
     ''' <remarks></remarks>
-    Public Sub Calculation(ByRef ConTaxCalData As DataSet)
+    ''' 
+    Public Sub Calculation()
 
         '外税税額算出
-        Call CalculationOutside(ConTaxCalData)
+        Call CalculationOutside()
 
         '内税税額算出
-        Call CalculationInside(ConTaxCalData)
+        Call CalculationInside()
 
     End Sub
 
     ''' <summary>
     ''' 外税税額算出 丸め処理も実施
     ''' </summary>
-    ''' <param name="ConTaxCalData"></param>
     ''' <returns>外税税額</returns>
     ''' <remarks></remarks>
-    Public Function CalculationOutside(ByRef ConTaxCalData As DataSet) As Decimal
+    Public Function CalculationOutside() As Decimal
 
         Dim TaxAmount As Decimal
 
         '外税税額算出
-        TaxAmount = CalculationOutsideTax(ConTaxCalData.OriginalAmount, ConTaxCalData.TaxRate)
-        ConTaxCalData.OutsideTaxAmount = RoundCalc.Calculation(TaxAmount, ConTaxCalData.TaxRound, ConTaxCalData.RoundDigits)
+        TaxAmount = CalculationOutsideTax(OriginalAmount, TaxRate)
+        OutsideTaxAmount = RoundCalc.Calculation(TaxAmount, TaxRound, RoundDigits)
 
-        Return ConTaxCalData.OutsideTaxAmount
+        Return OutsideTaxAmount
     End Function
 
     ''' <summary>
@@ -65,21 +62,20 @@ Public Module ConsumptionTaxCalc
     ''' <summary>
     ''' 内税税額算出 丸め処理も実施 税別金額はInsideNetAmount
     ''' </summary>
-    ''' <param name="ConTaxCalData"></param>
     ''' <returns>内税税額 InsideTaxAmount:内税税額 InsideNetAmount:税別金額</returns>
     ''' <remarks></remarks>
-    Public Function CalculationInside(ByRef ConTaxCalData As DataSet) As Decimal
+    Public Function CalculationInside() As Decimal
 
         Dim TaxAmount As Decimal
 
         '内税税額算出
-        TaxAmount = CalculationInsideTax(ConTaxCalData.OriginalAmount, ConTaxCalData.TaxRate)
-        ConTaxCalData.InsideTaxAmount = RoundCalc.Calculation(TaxAmount, ConTaxCalData.TaxRound, ConTaxCalData.RoundDigits)
+        TaxAmount = CalculationInsideTax(OriginalAmount, TaxRate)
+        InsideTaxAmount = RoundCalc.Calculation(TaxAmount, TaxRound, RoundDigits)
 
         '内税正味金額算出
-        ConTaxCalData.InsideNetAmount = ConTaxCalData.OriginalAmount - ConTaxCalData.InsideTaxAmount
+        InsideNetAmount = OriginalAmount - InsideTaxAmount
 
-        Return ConTaxCalData.InsideTaxAmount
+        Return InsideTaxAmount
     End Function
 
     ''' <summary>
@@ -103,4 +99,4 @@ Public Module ConsumptionTaxCalc
         Return InsideNetAmount - OutsideNetAmount
     End Function
 
-End Module
+End Class

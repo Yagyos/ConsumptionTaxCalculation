@@ -7,19 +7,23 @@ Public Class Form1
 
         'Call RoundCalc.SelfCheck()
 
-        Dim ConTaxCalData As New ConsumptionTaxCalc.DataSet
+        Dim ConTaxCalData As New ConsumptionTaxCalc
 
-        ConTaxCalData.OriginalAmount = 100
-        ConTaxCalData.TaxRound = RoundCalc.RoundType.Round_off
-        ConTaxCalData.RoundDigits = 0
-        ConTaxCalData.TaxRate = 10
+        With ConTaxCalData
 
-        Call ConsumptionTaxCalc.Calculation(ConTaxCalData)
+            .OriginalAmount = 100
+            .TaxRound = RoundCalc.RoundType.Round_off
+            .RoundDigits = 0
+            .TaxRate = 10
 
-        Button1.Text = ConTaxCalData.OriginalAmount & "/" _
-                     & ConTaxCalData.OutsideTaxAmount & vbCrLf _
-                     & ConTaxCalData.InsideNetAmount & "/" _
-                     & ConTaxCalData.InsideTaxAmount
+            Call .Calculation()
+
+            Button1.Text = .OriginalAmount & "/" _
+                         & .OutsideTaxAmount & vbCrLf _
+                         & .InsideNetAmount & "/" _
+                         & .InsideTaxAmount
+
+        End With
 
     End Sub
 

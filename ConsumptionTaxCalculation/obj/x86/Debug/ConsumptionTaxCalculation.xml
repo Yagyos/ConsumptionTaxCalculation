@@ -6,17 +6,15 @@ ConsumptionTaxCalculation
 </name>
 </assembly>
 <members>
-<member name="M:ConsumptionTaxCalculation.ConsumptionTaxCalc.Calculation(ConsumptionTaxCalculation.ConsumptionTaxCalc.DataSet@)">
+<member name="M:ConsumptionTaxCalculation.ConsumptionTaxCalc.Calculation">
 	<summary>
  税計算実施
  </summary>
-	<param name="ConTaxCalData"></param>
 	<remarks></remarks>
-</member><member name="M:ConsumptionTaxCalculation.ConsumptionTaxCalc.CalculationOutside(ConsumptionTaxCalculation.ConsumptionTaxCalc.DataSet@)">
+</member><member name="M:ConsumptionTaxCalculation.ConsumptionTaxCalc.CalculationOutside">
 	<summary>
  外税税額算出 丸め処理も実施
  </summary>
-	<param name="ConTaxCalData"></param>
 	<returns>外税税額</returns>
 	<remarks></remarks>
 </member><member name="M:ConsumptionTaxCalculation.ConsumptionTaxCalc.CalculationOutsideTax(System.Decimal,System.Decimal)">
@@ -27,11 +25,10 @@ ConsumptionTaxCalculation
 	<param name="TaxRate"></param>
 	<returns>外税税額</returns>
 	<remarks></remarks>
-</member><member name="M:ConsumptionTaxCalculation.ConsumptionTaxCalc.CalculationInside(ConsumptionTaxCalculation.ConsumptionTaxCalc.DataSet@)">
+</member><member name="M:ConsumptionTaxCalculation.ConsumptionTaxCalc.CalculationInside">
 	<summary>
  内税税額算出 丸め処理も実施 税別金額はInsideNetAmount
  </summary>
-	<param name="ConTaxCalData"></param>
 	<returns>内税税額 InsideTaxAmount:内税税額 InsideNetAmount:税別金額</returns>
 	<remarks></remarks>
 </member><member name="M:ConsumptionTaxCalculation.ConsumptionTaxCalc.CalculationInsideTax(System.Decimal,System.Decimal)">
